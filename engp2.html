@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning App</title>
+    <link rel="stylesheet" href="eng-css.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Describe the Picture</h1>
+        <div class="image-container">
+            <img src="img\b.jpeg" width="500" height="600">
+        </div>
+        <div class="input-container">
+            <label for="userinput">Write a sentence using the shown letter:</label>
+            <textarea id="userinput" rows="4" placeholder="Type your sentence here..."></textarea>
+        </div>
+        <button onclick="checkInput()">Submit</button>
+        <p id="feedback"></p>
+    </div>
+
+<script>
+    function checkInput() {
+        var userinput = document.getElementById("userinput").value.trim().toLowerCase();
+        var correctAnswer = 'ball';
+
+        if(userinput == correctAnswer){
+            window.location.href = "engp3.html";
+        }
+        else{
+            window.location.href = "index.html";
+        }
+    }
+</script>
+
+    <!----- <script src="script.js"></script>--->
+</body>
+
+</html>
